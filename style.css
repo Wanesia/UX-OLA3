@@ -50,7 +50,7 @@ header {
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 5rem;
   white-space: nowrap;
 }
@@ -499,8 +499,8 @@ header {
   /* Content section */
   .content h2 {
     margin-top: 3rem;
-    margin-bottom: 2rem;
     font-size: 1.5rem;
+    margin: 3rem 2rem 2rem 2rem;
   }
 
   .content-row {
@@ -559,14 +559,26 @@ header {
     font-size: 1.5rem;
   }
 
-  .logos-first-row,
-  .logos-second-row {
-    margin: 5rem 2.5rem;
-    gap: 2rem;
+  .logos {
+    margin-top: 2.5rem;
+    overflow: hidden;
+    width: 100%;
   }
 
+  .logos-first-row,
+  .logos-second-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
   .logos img {
-    height: 2.5rem;
+    height: 3rem;
+    width: auto;
+    max-width: 100%;
   }
   .logos img[alt="H&M"],
   .logos img[alt="THE NORTH FACE"],
@@ -574,7 +586,7 @@ header {
   .logos img[alt="adidas"] {
     height: 3.5rem;
   }
-  
+
   .logos img[alt="LEVI"] {
     height: 6rem;
   }
@@ -601,7 +613,7 @@ header {
   .label-columns {
     flex-direction: column;
   }
-  .second-label-column { 
+  .second-label-column {
     display: flex;
     justify-content: center;
     margin: 2rem 0;
