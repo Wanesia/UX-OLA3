@@ -8,6 +8,11 @@
   </head>
   <body>
     <header id="">
+      <div class="burger-menu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </div>
       <nav class="navbar">
         <ul class="navigation-links">
           <li><a href="#home">Home</a></li>
@@ -283,5 +288,22 @@
         </div>
       </div>
     </section>
+    <script>
+      const burgerMenu = document.querySelector('.burger-menu');
+      const navLinks = document.querySelector('.navigation-links');
+    
+      burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+    
+      // Close menu when clicking on a link
+      document.querySelectorAll('.navigation-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          burgerMenu.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    </script>
   </body>
 </html>
