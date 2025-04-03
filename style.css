@@ -1,0 +1,342 @@
+:root {
+  /* Main colors */
+  --green: #3c4a3e;
+  --text-gray: #333333;
+  --light: #f5f1e6;
+  /* Dark mode colors */
+  --dark-mode: #262e27;
+  --dark-mode-heading: #e4d19d;
+
+  /* Fonts */
+  --font-family: "Helvetica Neue", Arial;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--light);
+}
+.test {
+  background-color: lightblue;
+  height: 25rem;
+}
+
+/* Navbar */
+header {
+  position: sticky;
+  font-size: 1.125rem;
+  top: 0;
+  background-color: var(--light);
+  width: 100%;
+  height: 6.63rem;
+  z-index: 1000;
+}
+.navbar {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+}
+
+.navigation-links {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+/* Hero section*/
+.hero {
+  background-color: var(--green);
+  width: 86.4375rem;
+  height: 24.1875rem;
+  margin: auto;
+  color: var(--light);
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  padding: 4.69rem 0 4rem 4.5rem;
+}
+
+.hero-text h1 {
+  margin-bottom: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--light, #f5f1e6);
+  line-height: 150%; /* 3.75rem */
+}
+
+.hero-text p {
+  color: var(--light, #f5f1e6);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  width: 36rem;
+  margin-bottom: 6.44rem;
+}
+
+.left-column {
+  flex: 1;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  width: 36rem;
+}
+
+.stats h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--green);
+}
+.stats p {
+  color: var(--green);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.stats > div {
+  margin: 0 1rem;
+}
+.stats > div:not(:last-child) {
+  border-right: 0.125rem solid;
+  border-color: var(--green);
+  height: 5.375rem;
+}
+
+.hero-image {
+  position: relative;
+  left: -4.44rem;
+  top: -6rem;
+}
+.hero-image img {
+  height: 32rem;
+  width: 26rem;
+}
+
+/* Content */
+.content h2 {
+  margin-top: 16rem;
+  color: var(--green);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 5.8rem;
+}
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 6.75rem;
+  margin-bottom: 3rem;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.02rem;
+}
+.text-column a {
+  padding-top: 10rem;
+  color: var(--green);
+}
+.content-link {
+  margin-top: 1rem;
+}
+.text-column {
+  width: 31rem;
+}
+
+.content-image {
+  width: 20rem;
+  height: 20rem;
+}
+.numbered-heading {
+  color: var(--green);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.number {
+  font-size: 2.25rem;
+  color: #91a494;
+  font-weight: 700;
+}
+
+/* Recycling guide video */
+.guide-container {
+  background-color: var(--green);
+  border-radius: 1.5rem;
+  color: var(--light);
+  width: 77.5rem;
+  height: 45.75rem;
+  margin: auto;
+  margin-top: 4rem;
+}
+.guide-text {
+  width: 60rem;
+  margin: auto;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+}
+.guide-text h2 {
+  padding-top: 3rem;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 3rem */
+  letter-spacing: -0.04rem;
+}
+
+.video-container {
+  width: 58.125rem;
+  height: 26.75rem;
+  background-color: #d9d9d9;
+  margin: auto;
+  margin-top: 1.8rem;
+}
+
+.video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Retailers and their logos */
+.retailers {
+  margin-top: 5.6rem;
+}
+.retailers-text {
+  margin: auto;
+  width: 60rem;
+}
+.retailers-text h2 {
+  color: var(--green);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 3rem */
+  letter-spacing: -0.04rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.retailers-text p {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+  text-align: center;
+}
+.logos {
+  margin-top: 2.5rem;
+}
+
+.logos-first-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2.5rem 6.25rem 4.81rem 6.25rem;
+}
+.logos-second-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 20rem;
+  margin-bottom: 4.38rem;
+}
+
+.logos img {
+  height: 5rem;
+}
+.logos img[alt="H&M"],
+.logos img[alt="THE NORTH FACE"],
+.logos img[alt="adidas"] {
+  height: 7rem;
+}
+
+.logos img[alt="LEVI"] {
+  height: 12rem;
+}
+
+/* Lablel */
+.label-container {
+  width: 77.5rem;
+  height: 35.4375rem;
+  background-color: var(--green);
+  margin: auto;
+  border-radius: 1.5rem;;
+  margin-bottom: 5rem;
+}
+.label-text h2{
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.04rem;
+  padding-top: 4.5rem;
+  display: flex;
+  justify-content: center;
+}
+.label-description {
+  padding-top: 1.25rem;
+  width: 60rem;
+  display: flex;
+  margin: auto;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.label-text {
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+}
+.first-label-column{
+  width: 40%;
+}
+.second-label-column{
+  width: 20%;
+}
+
+.label-columns {
+  display: flex;
+  padding-top: 2rem;
+}
+.second-label-column img {
+  width: 20rem;
+  height: 20rem;
+  margin-top: -2rem;
+}
+.check-div{
+  display: flex;
+  width: 20rem;
+  margin: 0 7.25rem 3.75rem 7.25rem;
+  gap: 0.5rem;
+}
