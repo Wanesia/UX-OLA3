@@ -399,6 +399,9 @@ header {
       justify-content: space-between;
       align-items: center;
     }
+    #theme-toggle{
+      top:0.5rem;
+    }
 
     .navbar {
       width: auto;
