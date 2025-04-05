@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="darkmode.js" defer></script>
   </head>
-  <body>
+  <body class="dark-mode">
     <header id="">
       <div class="burger-menu">
         <div class="burger-line"></div>
@@ -14,6 +15,10 @@
         <div class="burger-line"></div>
       </div>
       <nav class="navbar">
+        <button id="theme-toggle">
+          <img src="resources/icons/moon.svg" alt="moon">
+          <img src="resources/icons/sun.svg" alt="sun">
+        </button>
         <ul class="navigation-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#help">How To Help</a></li>
@@ -22,7 +27,6 @@
           <li><a href="#labels">Sustainable Labels</a></li>
         </ul>
       </nav>
-      <!-- /*TODO dark mode switch here?-->
     </header>
     <section class="hero" id="home">
       <div class="hero-content">
