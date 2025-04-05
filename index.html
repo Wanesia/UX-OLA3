@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="darkmode.js" defer></script>
+    <script type="text/javascript" src="cookies.js" defer></script>
   </head>
   <body>
     <header id="">
@@ -16,8 +17,8 @@
       </div>
       <nav class="navbar">
         <button id="theme-toggle">
-          <img src="resources/icons/moon.svg" alt="moon">
-          <img src="resources/icons/sun.svg" alt="sun">
+          <img src="resources/icons/moon.svg" alt="moon" />
+          <img src="resources/icons/sun.svg" alt="sun" />
         </button>
         <ul class="navigation-links">
           <li><a href="#home">Home</a></li>
@@ -66,7 +67,7 @@
     </section>
     <section>
       <div class="content">
-        <h2  id="help">How can you give old threads new life?</h2>
+        <h2 id="help">How can you give old threads new life?</h2>
         <div class="content-row">
           <img
             class="content-image"
@@ -202,15 +203,27 @@
       </div>
       <div class="logos">
         <div class="logos-first-row">
-          <img src="resources/logos/zara.svg" alt="ZARA" loading="lazy"/>
-          <img src="resources/logos/H&M.svg" alt="H&M" loading="lazy"/>
-          <img src="resources/logos/other.svg" alt="& Other Stories" loading="lazy"/>
-          <img src="resources/logos/nike.svg" alt="NIKE" loading="lazy"/>
+          <img src="resources/logos/zara.svg" alt="ZARA" loading="lazy" />
+          <img src="resources/logos/H&M.svg" alt="H&M" loading="lazy" />
+          <img
+            src="resources/logos/other.svg"
+            alt="& Other Stories"
+            loading="lazy"
+          />
+          <img src="resources/logos/nike.svg" alt="NIKE" loading="lazy" />
         </div>
         <div class="logos-second-row">
-          <img src="resources/logos/TNF.svg" alt="THE NORTH FACE" loading="lazy"/>
-          <img src="resources/logos/levis-logo-svgrepo-com.svg" alt="LEVI" loading="lazy"/>
-          <img src="resources/logos/adidas.svg" alt="adidas" loading="lazy"/>
+          <img
+            src="resources/logos/TNF.svg"
+            alt="THE NORTH FACE"
+            loading="lazy"
+          />
+          <img
+            src="resources/logos/levis-logo-svgrepo-com.svg"
+            alt="LEVI"
+            loading="lazy"
+          />
+          <img src="resources/logos/adidas.svg" alt="adidas" loading="lazy" />
         </div>
       </div>
     </section>
@@ -256,7 +269,7 @@
               </div>
             </div>
             <div class="second-label-column">
-              <img src="resources/label.png" alt="Label image" loading="lazy"/>
+              <img src="resources/label.png" alt="Label image" loading="lazy" />
             </div>
             <div class="third-label-column">
               <div class="check-div">
@@ -274,9 +287,7 @@
                   src="resources/check-square.svg"
                   alt="check square"
                 />
-                <p>
-                  Energy consumption information
-                </p>
+                <p>Energy consumption information</p>
               </div>
               <div class="check-div">
                 <img
@@ -287,25 +298,37 @@
                 <p>Recycled content percentage</p>
               </div>
             </div>
-            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+          <p>
+            We use cookies to enhance your experience. By continuing to visit
+            this site, you agree to our use of cookies.
+          </p>
+          <div class="cookie-buttons">
+            <button class="cookie-btn accept" id="acceptCookies">Accept</button>
+            <button class="cookie-btn reject" id="rejectCookies">Reject</button>
+            <a href="" class="cookie-link">Learn more</a>
           </div>
         </div>
       </div>
     </section>
     <script>
-      const burgerMenu = document.querySelector('.burger-menu');
-      const navLinks = document.querySelector('.navigation-links');
-    
-      burgerMenu.addEventListener('click', () => {
-        burgerMenu.classList.toggle('active');
-        navLinks.classList.toggle('active');
+      const burgerMenu = document.querySelector(".burger-menu");
+      const navLinks = document.querySelector(".navigation-links");
+
+      burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        navLinks.classList.toggle("active");
       });
-    
+
       // Close menu when clicking on a link
-      document.querySelectorAll('.navigation-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          burgerMenu.classList.remove('active');
-          navLinks.classList.remove('active');
+      document.querySelectorAll(".navigation-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          burgerMenu.classList.remove("active");
+          navLinks.classList.remove("active");
         });
       });
     </script>
