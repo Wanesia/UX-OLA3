@@ -741,9 +741,113 @@ header {
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .cookie-content {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* Newsletter */
+
+.newsletter {
+  padding: 2rem;
+  margin: 2rem 0;
+  color: var(--text-gray);
+}
+
+.newsletter-container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-gray);
+  margin-top: 1rem;
+}
+
+input,
+#interest {
+  padding: 0.8rem;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input::placeholder,
+#interest {
+  color: var(--number);
+}
+.dark-mode input,
+.dark-mode #interest {
+  background-color: var(--green);
+}
+.dark-mode .form-group input {
+  color: var(--number);
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  background: var(--green);
+  color: var(--light);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.newsletter a {
+  color: var(--number);
+}
+.newsletter-container p {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.confirmation-popup {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 1rem;
+  background: var(--green);
+  color: var(--light);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dark-mode .confirmation-popup {
+  background: var(--dark-mode-heading);
+  color: var(--light);
+}
+
+@media (max-width: 767px) {
+  .newsletter-container {
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+  .confirmation-popup {
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 3rem;
   }
 }
