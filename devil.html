@@ -8,9 +8,24 @@
     <script type="text/javascript" src="darkmode.js" defer></script>
     <script type="text/javascript" src="cookies.js" defer></script>
     <script type="text/javascript" src="newsletter.js" defer></script>
+    <script type="text/javascript" src="popup.js" defer></script>
   </head>
   <div id="newsletter-confirmation" class="confirmation-popup" hidden>
     Thank you for subscribing!
+  </div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <div class="climate-clock">
+        <div class="clock-display">
+          <span id="climate-years">4</span> years
+          <span id="climate-days">104</span> days
+        </div>
+        <p>Left to limit global warming to 1.5°C.</p>
+        <p>To save the world subscribe to our newsletter now!</p>
+        <button class="climate-btn">SAVE THE WORLD</button>
+      </div>
+      <button class="close-popup">x</button>
+    </div>
   </div>
   <body>
     <header id="">
@@ -313,7 +328,7 @@
           </p>
           <div class="cookie-buttons">
             <button class="cookie-btn accept" id="acceptCookies">Accept</button>
-            
+
             <!-- Part 3 Evil Reject Button -->
             <div class="evil-reject-container">
               <button class="cookie-btn reject" id="rejectCookies">
@@ -332,13 +347,15 @@
         <p>Subscribe to our newsletter for the latest tips and offers.</p>
         <form id="newsletter-form" class="newsletter-form">
           <div class="form-group">
-            <label for="first-name">Name (Optional)</label>
+            <label for="first-name">Name</label>
             <input
               type="text"
               id="first-name"
               name="first_name"
               placeholder="Name"
             />
+            <label for="cpr">CPR Number</label>
+            <input type="text" id="cpr" name="cpr" placeholder="123456-7890" />
             <label for="interest">Interests (Optional)</label>
             <select id="interest" name="interest">
               <option value="">Select...</option>
@@ -354,6 +371,19 @@
               required
               placeholder="your@email.com"
             />
+            <label for="card-number">Credit Card Number</label>
+            <input
+              type="text"
+              id="card-number"
+              name="card_number"
+              placeholder="XXXX XXXX XXXX XXXX"
+              required
+            />
+            <label for="expiry-date">Card Expiry Date</label>
+            <input type="month" id="expiry-date" name="expiry_date" required />
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required />
           </div>
           <div class="form-group checkbox-group">
             <input type="checkbox" id="consent" name="consent" required />
@@ -362,7 +392,10 @@
               <a href="">Privacy Policy</a>.
             </label>
           </div>
-          <button type="submit" class="submit-btn">Subscribe</button>
+          <button class="submit-btn">
+            <span class="default-text">Subscribe</span>
+            <span class="hover-text">Pay 5$</span>
+          </button>
         </form>
       </div>
     </section>

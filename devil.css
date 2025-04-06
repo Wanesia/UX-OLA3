@@ -724,8 +724,6 @@ header {
   background: var(--light);
   color: var(--green);
   font-weight: 700;
-  transition: all 0.3s ease; /* Add smooth transition */
-
 }
 .dark-mode .cookie-btn {
   color: var(--dark-mode-heading) !important;
@@ -748,21 +746,12 @@ header {
 
 .evil-reject-overlay {
   position: absolute;
-  top: 5%; /* Leaves 5% gap at top */
-  left: 5%; /* Leaves 5% gap at left */
+  top: 5%;
+  left: 5%;
   width: 90%;
   height: 90%;
   z-index: 2;
   cursor: not-allowed;
-}
-/* When the evil-reject-overlay is hovered, highlight the accept button */
-.evil-reject-overlay:hover ~ .cookie-btn.accept,
-.evil-reject-overlay:hover + .cookie-btn.accept {
-  /* Choose one of these highlight effects: */
-  box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.6); /* Green glow */
-  background-color: #4CAF50; /* Green background */
-  transform: scale(1.1); /* Slight enlargement */
-  border-color: #ff0; /* Yellow border */
 }
 
 .cookie-link {
@@ -846,6 +835,17 @@ input::placeholder,
   font-size: 1rem;
   letter-spacing: 0.1rem;
 }
+.submit-btn .hover-text {
+  display: none;
+}
+
+.submit-btn:hover .default-text {
+  display: none;
+}
+
+.submit-btn:hover .hover-text {
+  display: inline;
+}
 .newsletter a {
   color: var(--number);
 }
@@ -887,4 +887,89 @@ input::placeholder,
     width: 15rem;
     height: 3rem;
   }
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup-content {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  border: 3px solid #ff4757;
+}
+
+.dark-mode .popup-content {
+  background: var(--dark-mode);
+}
+
+
+.close-popup {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+
+.climate-clock {
+  background: #111;
+  color: #ff4757;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-family: monospace;
+  max-width: 400px;
+  margin: 2rem auto;
+  border: 3px solid #ff4757;
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
+}
+
+.clock-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.climate-clock p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--light);
+}
+.climate-btn{
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--light);
+  color: #ff4757;
+  border-radius: 1.5rem;
+  border-color: #ff4757;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
 }
